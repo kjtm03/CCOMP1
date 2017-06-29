@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1498696551 source:c:\users\jktm\desktop\programacíon\c++\juego\main.cpp
+	<windows.h>
+	<mmsystem.h>
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+	"Nave.h"
+	"Borde.h"
+	"Kamikaze.h"
+	"Bala.h"
+	"list"
+
+1498694670 c:\users\jktm\desktop\programacíon\c++\juego\include\nave.h
+
+1498694203 source:c:\users\jktm\desktop\programacíon\c++\juego\src\nave.cpp
+	"Nave.h"
+	<stdio.h>
+	<conio.h>
+	<windows.h>
+	<mmsystem.h>
+
+1495919934 c:\users\jktm\desktop\programacíon\c++\juego\include\bordes.h
+
+1495927048 c:\users\jktm\desktop\programacíon\c++\juego\include\borde.h
+
+1498321945 source:c:\users\jktm\desktop\programacíon\c++\juego\src\borde.cpp
+	"Borde.h"
+	<windows.h>
+	<stdio.h>
+	<conio.h>
+
+1498359820 source:c:\users\jktm\desktop\programacíon\c++\juego\src\kamikaze.cpp
+	"Kamikaze.h"
+	"Nave.h"
+	<windows.h>
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+
+1498352539 c:\users\jktm\desktop\programacíon\c++\juego\include\kamikaze.h
+
+1498692848 c:\users\jktm\desktop\programacíon\c++\juego\include\bala.h
+
+1498358485 source:c:\users\jktm\desktop\programacíon\c++\juego\include\bala.h
+
+1498696928 source:c:\users\jktm\desktop\programacíon\c++\juego\src\bala.cpp
+	"Bala.h"
+	<conio.h>
+	<stdio.h>
+	<windows.h>
+
