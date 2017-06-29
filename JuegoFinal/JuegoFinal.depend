@@ -1,0 +1,100 @@
+# depslib dependency file v1.0
+1496992120 source:d:\juegofinal\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<list>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Asteroide.h"
+	"Bala.h"
+
+1496991972 d:\juegofinal\include\nave.h
+
+1496992222 source:d:\juegofinal\src\nave.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+
+1496990354 d:\juegofinal\include\asteroide.h
+
+1496984639 source:d:\juegofinal\src\asteroide.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Asteroide.h"
+	<stdlib.h>
+
+1496987108 d:\juegofinal\include\bala.h
+
+1496987455 source:d:\juegofinal\src\bala.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Asteroide.h"
+	"Bala.h"
+	<stdlib.h>
+	<vector>
+
+1498751567 source:d:\ciencia-de-la-computacion-1\juegofinal\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<list>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Kamikaze.h"
+	"Bala.h"
+
+1498344691 d:\ciencia-de-la-computacion-1\juegofinal\include\nave.h
+
+1498351372 d:\ciencia-de-la-computacion-1\juegofinal\include\asteroide.h
+
+1498750900 d:\ciencia-de-la-computacion-1\juegofinal\include\bala.h
+
+1498750823 source:d:\ciencia-de-la-computacion-1\juegofinal\src\asteroide.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Asteroide.h"
+	<stdlib.h>
+
+1498750900 source:d:\ciencia-de-la-computacion-1\juegofinal\src\bala.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Asteroide.h"
+	"Bala.h"
+	<stdlib.h>
+	<vector>
+
+1498750332 source:d:\ciencia-de-la-computacion-1\juegofinal\src\nave.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+
+1498751567 d:\ciencia-de-la-computacion-1\juegofinal\include\kamikaze.h
+
+1498751567 source:d:\ciencia-de-la-computacion-1\juegofinal\src\kamikaze.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Kamikaze.h"
+	<stdlib.h>
+
