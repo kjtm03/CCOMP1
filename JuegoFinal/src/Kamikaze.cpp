@@ -5,22 +5,13 @@
 #include "Nave.h"
 #include "Kamikaze.h"
 #include <stdlib.h>
+#include "Posicion.h"
 using namespace std;
 
 Kamikaze::Kamikaze(int _x, int _y)
 {
    x = _x;
    y = _y;
-}
-void Kamikaze::coordenadas(int x, int y)
-{
-    HANDLE identi;
-    identi = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD pos_cursor;
-    pos_cursor.X = x;
-    pos_cursor.Y = y;
-
-    SetConsoleCursorPosition(identi,pos_cursor);
 }
 
 void Kamikaze::crear()
@@ -29,7 +20,7 @@ void Kamikaze::crear()
 }
 void Kamikaze::mover()
 {
-    coordenadas(x,y); printf("     ");
+    coordenadas(x,y); printf("       ");
     y++;
     if(y>32){
         x = rand()%70+2;
@@ -39,7 +30,7 @@ void Kamikaze::mover()
 }
 void Kamikaze::choque(Nave &nave)
 {
-    if(x >= nave.X() && x <= nave.X()+5 && y >= nave.Y() && y <= nave.Y()+2)
+    if(x >= nave.X()-5 && x <= nave.X()+4 && y >= nave.Y() && y <= nave.Y()+3)
     {
         nave.BajarCorazones();
         nave.borrar();

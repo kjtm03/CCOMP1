@@ -3,13 +3,12 @@
 #include "Posicion.h"
 
 
-class Kamikaze//:public Posicion
+class Kamikaze:public Posicion
 {
         int x,y;
 
     public:
         Kamikaze(int,int);
-        void coordenadas(int,int);
         void crear();
         void mover();
         void choque(class Nave &nave);

@@ -43,7 +43,7 @@
 	<stdlib.h>
 	<vector>
 
-1498772269 source:d:\ciencia-de-la-computacion-1\juegofinal\main.cpp
+1498776559 source:d:\ciencia-de-la-computacion-1\juegofinal\main.cpp
 	<iostream>
 	<stdio.h>
 	<stdlib.h>
@@ -53,8 +53,9 @@
 	"Nave.h"
 	"Kamikaze.h"
 	"Bala.h"
+	"Posicion.h"
 
-1498773037 d:\ciencia-de-la-computacion-1\juegofinal\include\nave.h
+1498776223 d:\ciencia-de-la-computacion-1\juegofinal\include\nave.h
 	"Posicion.h"
 
 1498351372 d:\ciencia-de-la-computacion-1\juegofinal\include\asteroide.h
@@ -81,17 +82,18 @@
 	<stdlib.h>
 	<vector>
 
-1498772625 source:d:\ciencia-de-la-computacion-1\juegofinal\src\nave.cpp
+1498777023 source:d:\ciencia-de-la-computacion-1\juegofinal\src\nave.cpp
 	<iostream>
 	<stdio.h>
 	<windows.h>
 	<conio.h>
 	"Nave.h"
-
-1498772697 d:\ciencia-de-la-computacion-1\juegofinal\include\kamikaze.h
 	"Posicion.h"
 
-1498771934 source:d:\ciencia-de-la-computacion-1\juegofinal\src\kamikaze.cpp
+1498776223 d:\ciencia-de-la-computacion-1\juegofinal\include\kamikaze.h
+	"Posicion.h"
+
+1498776883 source:d:\ciencia-de-la-computacion-1\juegofinal\src\kamikaze.cpp
 	<iostream>
 	<stdio.h>
 	<windows.h>
@@ -99,9 +101,11 @@
 	"Nave.h"
 	"Kamikaze.h"
 	<stdlib.h>
-
-1498773234 d:\ciencia-de-la-computacion-1\juegofinal\include\posicion.h
-
-1498771618 source:d:\ciencia-de-la-computacion-1\juegofinal\src\posicion.cpp
 	"Posicion.h"
+
+1498775726 d:\ciencia-de-la-computacion-1\juegofinal\include\posicion.h
+
+1498775750 source:d:\ciencia-de-la-computacion-1\juegofinal\src\posicion.cpp
+	"Posicion.h"
+	<windows.h>
 

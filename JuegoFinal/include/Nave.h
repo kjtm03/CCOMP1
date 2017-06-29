@@ -2,7 +2,7 @@
 #define NAVE_H
 #include "Posicion.h"
 
-class Nave//:public Posicion
+class Nave:public Posicion
 {
     private:
         int x,y;
@@ -11,7 +11,6 @@ class Nave//:public Posicion
 
     public:
         Nave(int ,int, int, int);
-        void coordenadas(int,int);
         int X() {return x;}
         int Y() {return y;}
         int V() {return vidas;}

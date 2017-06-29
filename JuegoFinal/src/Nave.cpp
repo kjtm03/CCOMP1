@@ -3,6 +3,7 @@
 #include <windows.h>
 #include <conio.h>
 #include "Nave.h"
+#include "Posicion.h"
 #define ARRIBA 72
 
 #define IZQUIERDA 75
@@ -16,16 +17,6 @@ Nave::Nave(int _x,int _y,int _corazones,int _vidas)
     y = _y;
     corazones = _corazones;
     vidas = _vidas;
-}
-void Nave::coordenadas(int x, int y)
-{
-    HANDLE identi;
-    identi = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD pos_cursor;
-    pos_cursor.X = x;
-    pos_cursor.Y = y;
-
-    SetConsoleCursorPosition(identi,pos_cursor);
 }
 void Nave::ocultar()
 {
@@ -43,19 +34,20 @@ void Nave::crear(){
     coordenadas(x,y+2);printf("%c%c%c%c%c",197,200,178,188,197);
 }
 void Nave::borrar(){
-    coordenadas(x,y);  printf("         ");
-    coordenadas(x,y+1);printf("         ");
-    coordenadas(x,y+2);printf("         ");
+    coordenadas(x-5,y);printf("     ");
+    coordenadas(x,y);printf("           ");
+    coordenadas(x,y+1);printf("           ");
+    coordenadas(x,y+2);printf("       ");
 }
 void Nave::mover(){
     if(kbhit()){
         char tecla = getch();
-        borrar();
+        borrar();/*
         if(tecla == 'a' && x>2)x--;
         if(tecla == 'd' && x+5<78)x++;
         if(tecla == 'w' && y>3)y--;
         if(tecla == 's'&& y+3<33)y++;
-
+    */  if(tecla == 'e')vidas++;
         if(tecla== IZQUIERDA && x>3)x--;
         if(tecla== DERECHA && x+6 <78)x++;
         if(tecla== ARRIBA && y>4)y--;
@@ -68,7 +60,7 @@ void Nave::mover(){
 void Nave::VidaCorazones(){
     coordenadas(50,2); printf("Vidas: %d",vidas);
     coordenadas(64,2); printf("Salud: ");
-    coordenadas(70,2); printf("       ");
+    coordenadas(70,2); printf("                      ");
     for(int i = 0; i<corazones; i++){
         coordenadas(70+i,2);printf("%c",3);
     }

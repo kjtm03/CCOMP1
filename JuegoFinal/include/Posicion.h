@@ -5,7 +5,8 @@
 class Posicion
 {
     public:
-        void coordenadas();
+        Posicion(){};
+        void coordenadas(int x, int y);
         ~Posicion(){};
 };
 

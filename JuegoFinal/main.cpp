@@ -7,19 +7,12 @@
 #include "Nave.h"
 #include "Kamikaze.h"
 #include "Bala.h"
+#include "Posicion.h"
 #define ESPACIO 32
 
 
 using namespace std;
-
-void coordenada(int x, int y){
-    HANDLE identi;
-    identi = GetStdHandle(STD_OUTPUT_HANDLE);
-    COORD pos_cursor;
-    pos_cursor.X = x;
-    pos_cursor.Y = y;
-    SetConsoleCursorPosition(identi,pos_cursor);
-}
+Posicion pos;
 void Ocultar_cursor(){
     HANDLE identi;
     identi = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -31,19 +24,19 @@ void Ocultar_cursor(){
 
 void Limites(){
     for(int i = 2; i<78; i++){ //limites arriba y abajo
-        coordenada(i,3); printf("%c",205);
-        coordenada(i,33); printf("%c",205);
+        pos.coordenadas(i,3); printf("%c",205);
+        pos.coordenadas(i,33); printf("%c",205);
     }
 
     for(int i =4; i<33; i++){ //limites derecha y izquierda
-        coordenada(2,i); printf("%c",186);
-        coordenada(77,i); printf("%c",186);
+        pos.coordenadas(2,i); printf("%c",186);
+        pos.coordenadas(77,i); printf("%c",186);
     }
     //bordes
-    coordenada(2,3); printf("%c",201);
-    coordenada(2,33); printf("%c",200);
-    coordenada(77,3); printf("%c",187);
-    coordenada(77,33); printf("%c",188);
+    pos.coordenadas(2,3); printf("%c",201);
+    pos.coordenadas(2,33); printf("%c",200);
+    pos.coordenadas(77,3); printf("%c",187);
+    pos.coordenadas(77,33); printf("%c",188);
 
 }
 void pausa();
@@ -111,7 +104,7 @@ int main()
 
     int puntos = 0;
     while(!GameOver){
-        coordenada(4,2); printf("Puntos %d", puntos);
+        pos.coordenadas(4,2); printf("Puntos %d", puntos);
 
         //RUTINA DE DISPAROS
         if(kbhit())
@@ -140,12 +133,12 @@ int main()
         for(it = kamikazes.begin(); it != kamikazes.end(); it++){
             for(i = balas.begin(); i != balas.end(); i++){
                 if((*it)->X() == (*it)->X() &&  ( (*it)->Y()+1 == (*it)->Y() || (*it)->Y() == (*it)->Y())){
-                    coordenada((*i)->X(), (*i)->Y()); printf("     ");
+                    pos.coordenadas((*i)->X(), (*i)->Y()); printf("     ");
                     delete (*i);
                     i = balas.erase(i);
 
                     kamikazes.push_back(new Kamikaze(rand()%74+3, 4));
-                    coordenada((*it)->X(), (*it)->Y()); printf("     ");
+                    pos.coordenadas((*it)->X(), (*it)->Y()); printf("     ");
                     delete(*it);
                     it = kamikazes.erase(it);
                     puntos+=5;
