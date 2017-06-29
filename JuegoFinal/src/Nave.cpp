@@ -17,7 +17,7 @@ Nave::Nave(int _x,int _y,int _corazones,int _vidas)
     corazones = _corazones;
     vidas = _vidas;
 }
-void Nave::coordenada(int x, int y)
+void Nave::coordenadas(int x, int y)
 {
     HANDLE identi;
     identi = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -38,14 +38,14 @@ void Nave::ocultar()
     SetConsoleCursorInfo(identi, &cursor);
 }
 void Nave::crear(){
-    coordenada(x,y);printf("  %c",30);
-    coordenada(x,y+1);printf("%c%c%c%c%c",30,40,207,41,30);
-    coordenada(x,y+2);printf("%c%c%c%c%c",197,200,178,188,197);
+    coordenadas(x,y);printf("  %c",30);
+    coordenadas(x,y+1);printf("%c%c%c%c%c",30,40,207,41,30);
+    coordenadas(x,y+2);printf("%c%c%c%c%c",197,200,178,188,197);
 }
 void Nave::borrar(){
-    coordenada(x,y);  printf("         ");
-    coordenada(x,y+1);printf("         ");
-    coordenada(x,y+2);printf("         ");
+    coordenadas(x,y);  printf("         ");
+    coordenadas(x,y+1);printf("         ");
+    coordenadas(x,y+2);printf("         ");
 }
 void Nave::mover(){
     if(kbhit()){
@@ -66,25 +66,25 @@ void Nave::mover(){
     }
 }
 void Nave::VidaCorazones(){
-    coordenada(50,2); printf("Vidas: %d",vidas);
-    coordenada(64,2); printf("Salud: ");
-    coordenada(70,2); printf("       ");
+    coordenadas(50,2); printf("Vidas: %d",vidas);
+    coordenadas(64,2); printf("Salud: ");
+    coordenadas(70,2); printf("       ");
     for(int i = 0; i<corazones; i++){
-        coordenada(70+i,2);printf("%c",3);
+        coordenadas(70+i,2);printf("%c",3);
     }
 }
 void Nave::Morir(){
     if(corazones==0){
         borrar();
-        coordenada(x,y);   printf("   **    ");//EXPLOCIONES
-        coordenada(x,y+1); printf("  ****   ");
-        coordenada(x,y+2); printf("   **    ");
+        coordenadas(x,y);   printf("   **    ");//EXPLOCIONES
+        coordenadas(x,y+1); printf("  ****   ");
+        coordenadas(x,y+2); printf("   **    ");
         Sleep(350);
 
         borrar();
-        coordenada(x,y);   printf(" * ** * ");//EXPLOCIONES 2
-        coordenada(x,y+1); printf("  ****  ");
-        coordenada(x,y+2); printf(" * ** * ");
+        coordenadas(x,y);   printf(" * ** * ");//EXPLOCIONES 2
+        coordenadas(x,y+1); printf("  ****  ");
+        coordenadas(x,y+2); printf(" * ** * ");
         Sleep(350);
 
         borrar();

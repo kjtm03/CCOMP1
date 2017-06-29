@@ -12,7 +12,7 @@ Kamikaze::Kamikaze(int _x, int _y)
    x = _x;
    y = _y;
 }
-void Kamikaze::coordenada(int x, int y)
+void Kamikaze::coordenadas(int x, int y)
 {
     HANDLE identi;
     identi = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -25,11 +25,11 @@ void Kamikaze::coordenada(int x, int y)
 
 void Kamikaze::crear()
 {
-   coordenada(x,y); printf("%c%c%c%c%c",4,40,207,41,4);
+   coordenadas(x,y); printf("%c%c%c%c%c",4,40,207,41,4);
 }
 void Kamikaze::mover()
 {
-    coordenada(x,y); printf("     ");
+    coordenadas(x,y); printf("     ");
     y++;
     if(y>32){
         x = rand()%70+2;
@@ -50,7 +50,3 @@ void Kamikaze::choque(Nave &nave)
     }
 }
 
-Kamikaze::~Kamikaze()
-{
-
-}

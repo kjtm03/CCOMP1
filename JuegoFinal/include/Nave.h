@@ -1,8 +1,8 @@
 #ifndef NAVE_H
 #define NAVE_H
+#include "Posicion.h"
 
-
-class Nave
+class Nave//:public Posicion
 {
     private:
         int x,y;
@@ -11,7 +11,7 @@ class Nave
 
     public:
         Nave(int ,int, int, int);
-        void coordenada(int,int);
+        void coordenadas(int,int);
         int X() {return x;}
         int Y() {return y;}
         int V() {return vidas;}
@@ -22,6 +22,7 @@ class Nave
         void mover();
         void VidaCorazones();
         void Morir();
+        ~Nave(){};
 };
 
 #endif // NAVE_H

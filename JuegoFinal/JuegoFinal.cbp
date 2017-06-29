@@ -37,10 +37,12 @@
 		<Unit filename="include/Bala.h" />
 		<Unit filename="include/Kamikaze.h" />
 		<Unit filename="include/Nave.h" />
+		<Unit filename="include/Posicion.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Bala.cpp" />
 		<Unit filename="src/Kamikaze.cpp" />
 		<Unit filename="src/Nave.cpp" />
+		<Unit filename="src/Posicion.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

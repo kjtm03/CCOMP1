@@ -46,16 +46,61 @@ void Limites(){
     coordenada(77,33); printf("%c",188);
 
 }
-
+void pausa();
 int main()
 {
-    Nave nave(35,30,3,3);
+    bool GameOver = true;
+    bool temp=false;
+    char tecla;
 
+    do
+    {
+        system("cls");
+        cin.clear();
+        cout << "Space Arcade" << endl;
+        cout << "-------------" << endl << endl;
+        cout << "\t1 .- Jugar" << endl;
+        cout << "\t2 .- Opciones" << endl;
+        cout << "\t3 .- Salir" << endl << endl;
+        cout << "Elije una opcion: ";
+
+        cin >> tecla;
+
+		switch(tecla)
+		{
+			case '1':
+				system("cls");
+				GameOver = false;
+                temp = true;
+				pausa();
+				break;
+
+			case '2':
+				system("cls");
+				cout << "En construccion...\n";
+				pausa();
+				break;
+
+			case '3':
+				system("cls");
+				temp = true;
+				//exit(1);
+				break;
+
+			default:
+				system("cls");
+				cout << "Opcion no valida.\a\n";
+				pausa();
+				break;
+		}
+    }while(temp!=true);
+
+    Nave nave(35,30,3,3);
     //Kamikaze ast(10,4), ast2(4,8), ast3(10,15), ast4(4,15);
-    list<Kamikaze *> Kamikazes;
+    list<Kamikaze *> kamikazes;
     list<Kamikaze *>::iterator it;
     for(int i = 0; i<4; i++){
-        Kamikazes.push_back(new Kamikaze(rand()%75+3, rand()%5+4));
+        kamikazes.push_back(new Kamikaze(rand()%70+3, rand()%5+4));
     }
 
     list <Bala *> balas;
@@ -63,7 +108,7 @@ int main()
     nave.crear();
     nave.borrar();
     nave.ocultar();
-    bool GameOver = false;
+
     int puntos = 0;
     while(!GameOver){
         coordenada(4,2); printf("Puntos %d", puntos);
@@ -86,23 +131,23 @@ int main()
             }*/
 
         }
-        for(it = Kamikazes.begin(); it != Kamikazes.end(); it++)
+        for(it = kamikazes.begin(); it != kamikazes.end(); it++)
         {
             (*it)->mover();
             (*it)->choque(nave);
         }
-        //COLISION BALAS/KamikazeS
-        for(it = Kamikazes.begin(); it != Kamikazes.end(); it++){
+        //COLISION BALAS/kamikazes
+        for(it = kamikazes.begin(); it != kamikazes.end(); it++){
             for(i = balas.begin(); i != balas.end(); i++){
                 if((*it)->X() == (*it)->X() &&  ( (*it)->Y()+1 == (*it)->Y() || (*it)->Y() == (*it)->Y())){
                     coordenada((*i)->X(), (*i)->Y()); printf("     ");
                     delete (*i);
                     i = balas.erase(i);
 
-                    Kamikazes.push_back(new Kamikaze(rand()%74+3, 4));
+                    kamikazes.push_back(new Kamikaze(rand()%74+3, 4));
                     coordenada((*it)->X(), (*it)->Y()); printf("     ");
                     delete(*it);
-                    it = Kamikazes.erase(it);
+                    it = kamikazes.erase(it);
                     puntos+=5;
 
                 }
@@ -117,6 +162,10 @@ int main()
     if(nave.V()==0) GameOver = true;
     Sleep(29);
     }
-
-    return 0;
+}
+void pausa()
+{
+    cout << "Pulsa una tecla para continuar...";
+   	getwchar();
+    getwchar();
 }

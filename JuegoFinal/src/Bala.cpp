@@ -3,7 +3,7 @@
 #include <windows.h>
 #include <conio.h>
 #include "Nave.h"
-#include "Asteroide.h"
+#include "Kamikaze.h"
 #include "Bala.h"
 #include <stdlib.h>
 #include <vector>
