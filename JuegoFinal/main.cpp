@@ -131,7 +131,9 @@ int main()
         //COLISION BALAS/kamikazes
         for(k = kamikazes.begin(); k != kamikazes.end(); k++){
             for(b = balas.begin(); b != balas.end(); b++){
-                if((*k)->X() == (*b)->X() && ((*k)->Y()+1 == (*b)->Y() || (*k)->Y() == (*b)->Y())){
+                if((*k)->X()+2 == (*b)->X() && ((*k)->Y()+1 == (*b)->Y() || (*k)->Y() == (*b)->Y())){
+                //if((*k)->X() == (*b)->X() || (*k)->X()+1 == (*b)->X() || (*k)->X()+2 == (*b)->X() || (*k)->X()+3 == (*b)->X() || (*k)->X()+4 == (*b)->X() || (*k)->X()+5 == (*b)->X() && (*k)->X()+2 == (*b)->X() && ((*k)->Y() == (*b)->Y()-1 || (*k)->Y() == (*b)->Y())){
+                //if((*b)->X() >= (*k)->X() && (*b)->X() <= (*k)+5 && ((*k)->Y()+1 == (*b)->Y() || (*k)->Y() == (*b)->Y())){
                     pos.coordenadas((*b)->X(), (*b)->Y()); printf(" ");
                     delete (*b);
                     b = balas.erase(b);
@@ -166,7 +168,7 @@ int main()
 }
 void pausa()
 {
-    cout << "Pulsa una tecla para continuar...";
-   	getwchar();
+    cout << "";
+    getwchar();
     getwchar();
 }

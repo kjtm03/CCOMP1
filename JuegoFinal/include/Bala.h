@@ -5,13 +5,13 @@
 class Bala:public Posicion
 {
         int x,y;
-public:
-    Bala(int,int);
-    int X() {return x;}
-    int Y() {return y;}
-    void mover();
-    bool fuera();
-    ~Bala(){};
+       public:
+           Bala(int,int);
+           int X() {return x;}
+           int Y() {return y;}
+           void mover();
+           bool fuera();
+           ~Bala(){};
 
 };
 
