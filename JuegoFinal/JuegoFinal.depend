@@ -109,3 +109,130 @@
 	"Posicion.h"
 	<windows.h>
 
+1498804792 source:d:\ccomp1\juegofinal\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<list>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Kamikaze.h"
+	"Bala.h"
+	"Posicion.h"
+	"Estrella.h"
+
+1498792679 d:\ccomp1\juegofinal\include\nave.h
+	"Posicion.h"
+
+1498792679 d:\ccomp1\juegofinal\include\posicion.h
+
+1498792679 d:\ccomp1\juegofinal\include\kamikaze.h
+	"Posicion.h"
+
+1498792679 d:\ccomp1\juegofinal\include\bala.h
+
+1498792680 source:d:\ccomp1\juegofinal\src\posicion.cpp
+	"Posicion.h"
+	<windows.h>
+
+1498794239 source:d:\ccomp1\juegofinal\src\bala.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Kamikaze.h"
+	"Bala.h"
+	<stdlib.h>
+	<vector>
+
+1498793397 source:d:\ccomp1\juegofinal\src\kamikaze.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Kamikaze.h"
+	<stdlib.h>
+	"Posicion.h"
+
+1498792680 source:d:\ccomp1\juegofinal\src\nave.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Posicion.h"
+
+1498803036 source:d:\ccomp1\juegofinal\src\estrella.cpp
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Estrella.h"
+	"Posicion.h"
+
+1498803036 d:\ccomp1\juegofinal\include\estrella.h
+	"Posicion.h"
+	"list."
+
+1498832114 source:c:\users\tony\downloads\ciencia-de-la-computacion-1-master\juegofinal\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<list>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Kamikaze.h"
+	"Bala.h"
+	"Posicion.h"
+	"Estrella.h"
+
+1498823926 c:\users\tony\downloads\ciencia-de-la-computacion-1-master\juegofinal\include\nave.h
+	"Posicion.h"
+
+1498823926 c:\users\tony\downloads\ciencia-de-la-computacion-1-master\juegofinal\include\posicion.h
+
+1498823926 c:\users\tony\downloads\ciencia-de-la-computacion-1-master\juegofinal\include\kamikaze.h
+	"Posicion.h"
+
+1498823926 c:\users\tony\downloads\ciencia-de-la-computacion-1-master\juegofinal\include\bala.h
+
+1498823926 c:\users\tony\downloads\ciencia-de-la-computacion-1-master\juegofinal\include\estrella.h
+	"Posicion.h"
+	"list."
+
+1498823926 source:c:\users\tony\downloads\ciencia-de-la-computacion-1-master\juegofinal\src\bala.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Kamikaze.h"
+	"Bala.h"
+	<stdlib.h>
+	<vector>
+
+1498823926 source:c:\users\tony\downloads\ciencia-de-la-computacion-1-master\juegofinal\src\kamikaze.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Kamikaze.h"
+	<stdlib.h>
+	"Posicion.h"
+
+1498823926 source:c:\users\tony\downloads\ciencia-de-la-computacion-1-master\juegofinal\src\nave.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+	<conio.h>
+	"Nave.h"
+	"Posicion.h"
+
+1498823926 source:c:\users\tony\downloads\ciencia-de-la-computacion-1-master\juegofinal\src\posicion.cpp
+	"Posicion.h"
+	<windows.h>
+

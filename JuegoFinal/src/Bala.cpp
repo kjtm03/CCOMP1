@@ -19,7 +19,7 @@ void Bala::mover()
     coordenadas(x,y); printf(" ");
     //if(y>4)
     y--;
-    coordenadas(x,y); printf("!");
+    coordenadas(x,y); printf("%c",248);
 }
 bool Bala::fuera()
 {

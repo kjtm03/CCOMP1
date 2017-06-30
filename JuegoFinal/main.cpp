@@ -8,8 +8,10 @@
 #include "Kamikaze.h"
 #include "Bala.h"
 #include "Posicion.h"
+#include "Estrella.h"
 #define ESPACIO 32
 
+//PATRON DE DISEÑO PUENTE EN BALAS Y KAMIKAZES, PORQUE SON DOS LISTAS QUE RECIBEN HERENCIA INDEPENDIENTES PERO SE RELACIONAN
 
 using namespace std;
 Posicion pos;
@@ -39,6 +41,12 @@ void Limites(){
     pos.coordenadas(77,33); printf("%c",188);
 
 }
+
+template<class user>
+user NombreUsuario(user a){
+    cout<<"Ingrese su nombre de usuario: "<<endl;
+    cin>>a;
+}
 void pausa();
 int main()
 {
@@ -50,12 +58,17 @@ int main()
     {
         system("cls");
         cin.clear();
-        cout << "Space Arcade" << endl;
-        cout << "-------------" << endl << endl;
-        cout << "\t1 .- Jugar" << endl;
-        cout << "\t2 .- Opciones" << endl;
-        cout << "\t3 .- Salir" << endl << endl;
-        cout << "Elije una opcion: ";
+        cout << "                                  Ultimate Star Wars" << endl;
+        cout << "                               -------------" << endl << endl;
+        cout << "                               \t1 .- Jugar" << endl;
+        cout<<"\n";
+        cout << "                               \t2 .- Instrucciones" << endl;
+        cout<<"\n";
+        //cout<<"                               \t3 .- Nombre de jugador" << endl;
+       // cout<<"\n";
+        cout << "                               \t3 .- Salir" << endl << endl;
+        cout<<"\n";
+        cout << "                               Elije una opcion: ";
 
         cin >> tecla;
 
@@ -70,14 +83,27 @@ int main()
 
 			case '2':
 				system("cls");
-				cout << "En construccion...\n";
+				cout << "Instrucciones:...\n";
+				cout << "El objetivo es ganar la mayor cantidad de puntos posible.\n";
+				cout << "La nave debe esquivar a los veloces kamikazes, puede disparar rafagas.\n";
+				cout << "La unica manera de destruir un kamikaze es disparandole en el centro.\n";
+				cout << "Tienes 3 oportunidades, se mas veloz que ellos!\n";
 				pausa();
 				break;
+
+            /*case '3':
+                int x;
+                system("cls");
+                x.NombreUsuario();
+                pausa();
+                break;
+            */
 
 			case '3':
 				system("cls");
 				temp = true;
 				break;
+
 
 			default:
 				system("cls");
@@ -89,11 +115,18 @@ int main()
 
     Nave nave(35,30,3,3);
 
+
     list<Kamikaze *> kamikazes;
     list<Kamikaze *>::iterator k;
-    for(int i = 0; i<4; i++){
+    for(int i = 0; i<5; i++){
         kamikazes.push_back(new Kamikaze(rand()%70+1, rand()%5+4));
     }
+
+    /*list<Estrella *> estrellas;
+    for(int i = 0; i<5; i++){
+        estrellas.push_back(new Estrella(rand()%80, rand()%10+15));
+    }
+*/
 
     list <Bala *> balas;
     list <Bala *>::iterator b;
@@ -169,6 +202,7 @@ int main()
 void pausa()
 {
     cout << "";
+
     getwchar();
     getwchar();
 }

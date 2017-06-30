@@ -16,11 +16,11 @@ Kamikaze::Kamikaze(int _x, int _y)
 
 void Kamikaze::crear()
 {
-   coordenadas(x,y); printf("%c%c%c%c%c",4,40,207,41,4);
+   coordenadas(x,y); printf("%c%c%c%c%c%",40,196,2,196,41);
 }
 void Kamikaze::mover()
 {
-    coordenadas(x,y); printf("     ");
+    coordenadas(x,y); printf("          ");
     y++;
     if(y>32){
         x = rand()%70+2;
