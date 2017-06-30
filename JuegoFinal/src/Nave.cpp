@@ -77,7 +77,7 @@ void Nave::Morir(){
         coordenadas(x,y);   printf(" * ** * ");//EXPLOCIONES 2
         coordenadas(x,y+1); printf("  ****  ");
         coordenadas(x,y+2); printf(" * ** * ");
-        Sleep(350);
+        Sleep(400);
 
         borrar();
         vidas--;

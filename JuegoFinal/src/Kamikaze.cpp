@@ -20,7 +20,7 @@ void Kamikaze::crear()
 }
 void Kamikaze::mover()
 {
-    coordenadas(x,y); printf("       ");
+    coordenadas(x,y); printf("     ");
     y++;
     if(y>32){
         x = rand()%70+2;

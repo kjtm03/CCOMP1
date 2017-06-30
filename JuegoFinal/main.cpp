@@ -43,7 +43,7 @@ void pausa();
 int main()
 {
     bool GameOver = true;
-    bool temp=false;
+    bool temp = false;
     char tecla;
 
     do
@@ -77,7 +77,6 @@ int main()
 			case '3':
 				system("cls");
 				temp = true;
-				//exit(1);
 				break;
 
 			default:
@@ -89,15 +88,15 @@ int main()
     }while(temp!=true);
 
     Nave nave(35,30,3,3);
-    //Kamikaze ast(10,4), ast2(4,8), ast3(10,15), ast4(4,15);
+
     list<Kamikaze *> kamikazes;
-    list<Kamikaze *>::iterator it;
+    list<Kamikaze *>::iterator k;
     for(int i = 0; i<4; i++){
-        kamikazes.push_back(new Kamikaze(rand()%70+3, rand()%5+4));
+        kamikazes.push_back(new Kamikaze(rand()%70+1, rand()%5+4));
     }
 
     list <Bala *> balas;
-    list <Bala *>::iterator i;
+    list <Bala *>::iterator b;
     nave.crear();
     nave.borrar();
     nave.ocultar();
@@ -106,42 +105,42 @@ int main()
     while(!GameOver){
         pos.coordenadas(4,2); printf("Puntos %d", puntos);
 
-        //RUTINA DE DISPAROS
+        //DISPAROS
         if(kbhit())
         {
           char tecla = getch();
           if(tecla == ESPACIO)
             balas.push_back(new Bala(nave.X()+2, nave.Y()-1));
         }
-        //DISPAROS NO SE QUEDEN EN EL FONDO
-        for(i = balas.begin(); i != balas.end(); i++)
+        //DISPAROS NO TRASPASAN
+        for(b = balas.begin(); b != balas.end(); b++)
         {
-            (*i)->mover();
-            /*if((*i)->fuera()){
-                coordenada((*i)->X(), (*i)->Y()); printf(" ");
-                delete (*i);
-                i = balas.erase (i);
-            }*/
+            (*b)->mover();
+            if((*b)->fuera()){
+                pos.coordenadas((*b)->X(), (*b)->Y()); printf(" ");
+                delete(*b);
+                b = balas.erase(b);
+            }
 
         }
-        for(it = kamikazes.begin(); it != kamikazes.end(); it++)
+        for(k = kamikazes.begin(); k != kamikazes.end(); k++)
         {
-            (*it)->mover();
-            (*it)->choque(nave);
+            (*k)->mover();
+            (*k)->choque(nave);
         }
         //COLISION BALAS/kamikazes
-        for(it = kamikazes.begin(); it != kamikazes.end(); it++){
-            for(i = balas.begin(); i != balas.end(); i++){
-                if((*it)->X() == (*it)->X() &&  ( (*it)->Y()+1 == (*it)->Y() || (*it)->Y() == (*it)->Y())){
-                    pos.coordenadas((*i)->X(), (*i)->Y()); printf("     ");
-                    delete (*i);
-                    i = balas.erase(i);
+        for(k = kamikazes.begin(); k != kamikazes.end(); k++){
+            for(b = balas.begin(); b != balas.end(); b++){
+                if((*k)->X() == (*b)->X() && ((*k)->Y()+1 == (*b)->Y() || (*k)->Y() == (*b)->Y())){
+                    pos.coordenadas((*b)->X(), (*b)->Y()); printf(" ");
+                    delete (*b);
+                    b = balas.erase(b);
 
-                    kamikazes.push_back(new Kamikaze(rand()%74+3, 4));
-                    pos.coordenadas((*it)->X(), (*it)->Y()); printf("     ");
-                    delete(*it);
-                    it = kamikazes.erase(it);
-                    puntos+=5;
+                    kamikazes.push_back(new Kamikaze(rand()%70+1, 4));
+                    pos.coordenadas((*k)->X(), (*k)->Y()); printf("     ");
+                    delete(*k);
+                    k = kamikazes.erase(k);
+                    puntos+=2;
 
                 }
             }
@@ -155,6 +154,15 @@ int main()
     if(nave.V()==0) GameOver = true;
     Sleep(29);
     }
+    system("cls");
+    pos.coordenadas(35,13);printf("xxxxxxxxxxxxx");
+    pos.coordenadas(35,14);printf("xxxxxxxxxxxxx");
+    pos.coordenadas(35,15);printf("FIN DEL JUEGO");
+    pos.coordenadas(35,16);printf("xxxxxxxxxxxxx");
+    pos.coordenadas(35,17);printf("xxxxxxxxxxxxx");
+    pos.coordenadas(35,18);printf("             ");
+    pos.coordenadas(35,19);printf("             ");
+    pos.coordenadas(35,20);printf("             ");
 }
 void pausa()
 {

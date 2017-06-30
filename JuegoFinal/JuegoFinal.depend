@@ -43,7 +43,7 @@
 	<stdlib.h>
 	<vector>
 
-1498776559 source:d:\ciencia-de-la-computacion-1\juegofinal\main.cpp
+1498782925 source:d:\ciencia-de-la-computacion-1\juegofinal\main.cpp
 	<iostream>
 	<stdio.h>
 	<stdlib.h>
@@ -60,7 +60,7 @@
 
 1498351372 d:\ciencia-de-la-computacion-1\juegofinal\include\asteroide.h
 
-1498750900 d:\ciencia-de-la-computacion-1\juegofinal\include\bala.h
+1498778865 d:\ciencia-de-la-computacion-1\juegofinal\include\bala.h
 
 1498750823 source:d:\ciencia-de-la-computacion-1\juegofinal\src\asteroide.cpp
 	<iostream>
@@ -71,7 +71,7 @@
 	"Asteroide.h"
 	<stdlib.h>
 
-1498771298 source:d:\ciencia-de-la-computacion-1\juegofinal\src\bala.cpp
+1498780079 source:d:\ciencia-de-la-computacion-1\juegofinal\src\bala.cpp
 	<iostream>
 	<stdio.h>
 	<windows.h>
@@ -82,7 +82,7 @@
 	<stdlib.h>
 	<vector>
 
-1498777023 source:d:\ciencia-de-la-computacion-1\juegofinal\src\nave.cpp
+1498783092 source:d:\ciencia-de-la-computacion-1\juegofinal\src\nave.cpp
 	<iostream>
 	<stdio.h>
 	<windows.h>
@@ -93,7 +93,7 @@
 1498776223 d:\ciencia-de-la-computacion-1\juegofinal\include\kamikaze.h
 	"Posicion.h"
 
-1498776883 source:d:\ciencia-de-la-computacion-1\juegofinal\src\kamikaze.cpp
+1498783055 source:d:\ciencia-de-la-computacion-1\juegofinal\src\kamikaze.cpp
 	<iostream>
 	<stdio.h>
 	<windows.h>
